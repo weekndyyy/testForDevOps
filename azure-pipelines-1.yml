@@ -5,6 +5,14 @@
 
 trigger:
 - main
+- sss
+- main
+- sss- main
+- sss- main
+- sss- main
+- sss- main
+- sss- main
+- sss
 
 pool:
   vmImage: ubuntu-latest
