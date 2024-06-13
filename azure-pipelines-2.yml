@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- mainfff
+- mainfffw
 
 pool:
   vmImage: ubuntu-latest
