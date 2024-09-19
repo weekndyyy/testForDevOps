@@ -15,11 +15,5 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   call-other:
-    # The type of runner that the job will run on
-    if: ${{ true }}
-    runs-on: ubuntu-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        uses: weekndyyy/testForDevOps/.github/workflows/testcondition.yml@main
+    uses: weekndyyy/testForDevOps/.github/workflows/testcondition.yml@main
+        
