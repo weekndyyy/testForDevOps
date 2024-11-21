@@ -8,7 +8,7 @@ trigger:
 - azure-pipelines-0605
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: ubuntu-latestsss
 
 steps:
 - script: echo Hello, world!
