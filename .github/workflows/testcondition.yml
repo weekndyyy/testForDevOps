@@ -32,4 +32,4 @@ jobs:
     if: ${{ always() }}
     steps:
       - name: Run a multi-line script
-        run: sleep 10 && abc      
+        run: sleep 10  
