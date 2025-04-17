@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Set sensitive output
         id: set_output
-        run: echo "::set-output name=sensitive_output::qwer"
+        run: |
+              echo "::set-output name=sensitive_output::qwer"
+              echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
 
   test:
     runs-on: ubuntu-latest
