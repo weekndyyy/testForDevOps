@@ -12,8 +12,9 @@ jobs:
       - name: Set sensitive output
         id: set_output
         run: |
-              echo "::set-output name=sensitive_output::qwer"
-              echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
+              tag=qwer
+              echo "::set-output name=sensitive_output::$tag"
+              # echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
 
   test:
     runs-on: ubuntu-latest
