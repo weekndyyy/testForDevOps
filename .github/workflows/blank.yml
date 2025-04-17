@@ -9,4 +9,7 @@ jobs:
     steps:
       - name: Set output
         id: set_output
-        run: echo "::set-output name=my_output::${{ secrets.PASSWD }}"  
+        run: echo "token=qwer" >> $GITHUB_ENV
+      - name: use output
+        id: use_output
+        run: echo "${{ env.token }}"  
