@@ -9,7 +9,14 @@ jobs:
     steps:
       - name: Set output
         id: set_output
-        run: echo "token=qwer" >> $GITHUB_ENV
+        run: |
+          # 生成临时访问口令
+          TOKEN="temporary_token_$(date +%s)"
+          echo "::set-output name=token::$TOKEN"
+  build2:
+    needs: ["build"]
+    runs-on: ubuntu-latest
+    steps:
       - name: use output
         id: use_output
-        run: echo "${{ env.token }}"  
+        run: echo "${{ needs.build.outputs.token }}"
