@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Set output
         id: set_output
-        run: echo "::set-output name=my_output::value1"  
+        run: echo "::set-output name=my_output::${{ secrets.PASSWD }}"  
