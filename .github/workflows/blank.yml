@@ -12,6 +12,7 @@ jobs:
       - name: Set sensitive output
         id: set_output
         run: |
+              echo 'hello'
               tag=qwer
               echo "::set-output name=sensitive_output::$tag"
               # echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
