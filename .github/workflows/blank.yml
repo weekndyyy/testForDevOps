@@ -1,25 +1,11 @@
-name: test output
+name: test exp
 
 on:
   push:
     branches: [ "main" ]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    outputs:
-      sensitive_output: ${{ steps.set_output.outputs.sensitive_output }}
-    steps:
-      - name: Set sensitive output
-        id: set_output
-        run: |
-              echo 'hello'
-              tag=qwer
-              echo "::set-output name=sensitive_output::$tag"
-              # echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
-
   test:
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Use sensitive output
-        run: echo "${{ needs.build.outputs.sensitive_output }}"
+      - name: test exp
+        run: echo "${{ github.004cc }}"
